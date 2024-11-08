@@ -43,7 +43,14 @@ function hideSpecificRating() {
       parentDiv.style.display = 'none';
     }
   });
+
+  const contestTables = document.querySelectorAll('.tablesorter.user-contests-table');
+  contestTables.forEach(table => {
+    table.style.display = 'none';
+  });
+
 }
+
 
 
 // Run immediately
@@ -55,3 +62,4 @@ observer.observe(document.body, {
   childList: true,
   subtree: true
 });
+
